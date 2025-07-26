@@ -1,0 +1,22 @@
+# Ignore virtual environments
+venv/
+.env
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore model weights or large binary files
+*.bin
+*.safetensors
+*.ckpt
+*.pth
+*.dylib
+
+# Ignore temp folders
+temp/
+*.log
+*.csv
+
+# macOS system file
+.DS_Store
