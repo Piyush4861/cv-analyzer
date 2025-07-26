@@ -115,7 +115,7 @@ def process_all_cvs(folder_path):
                 print(f" Error processing {filename}: {e}")
     return all_data
 
-def export_to_csv(data, output_file="output.csv"):
+"""def export_to_csv(data, output_file="output.csv"):
     if not data:
         print("No data to write.")
         return
@@ -124,11 +124,20 @@ def export_to_csv(data, output_file="output.csv"):
         writer = csv.DictWriter(f, fieldnames=keys)
         writer.writeheader()
         writer.writerows(data)
-    print(f"\n📦 Data exported to {output_file}")
+    print(f"\n📦 Data exported to {output_file}")"""
 
-# ------------------ MAIN ------------------
+def add_cv_data(file_path):
+    try:
+        text = extract_text(file_path)
+        data = parse_cv_info(text)
+        return data
+    except Exception as e:
+        print(f"❌ Error in add_cv_data: {e}")
+        return {}
+
 
 if __name__ == "__main__":
     folder_path = "app/data/sample_cvs"
+    #folder_path = "temp"
     extracted_data = process_all_cvs(folder_path)
-    export_to_csv(extracted_data)
+    #export_to_csv(extracted_data)

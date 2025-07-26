@@ -22,3 +22,5 @@ STEP-2
 - start with importing the required libraries
 - create function to extract text from pdf
 - give pdf_path where all the pdfs are stored
+- run the function and we get the extracted data in json format
+- now we have completed the extraction of information from bulk cvs, now we want some frontend so that we can get cvs from the UI.
