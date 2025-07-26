@@ -19,4 +19,4 @@ temp/
 *.csv
 
 # macOS system file
-.DS_Store
+.DS_Storevenv/
