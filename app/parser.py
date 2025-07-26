@@ -105,14 +105,14 @@ def process_all_cvs(folder_path):
         file_path = os.path.join(folder_path, filename)
         if filename.lower().endswith((".pdf", ".docx")):
             try:
-                print(f"\n📄 Processing: {filename}")
+                print(f"\n Processing: {filename}")
                 text = extract_text(file_path)
                 data = parse_cv_info(text)
                 data['filename'] = filename
                 all_data.append(data)
-                print("✅ Extracted Info:", data)
+                print(" Extracted Info:", data)
             except Exception as e:
-                print(f"❌ Error processing {filename}: {e}")
+                print(f" Error processing {filename}: {e}")
     return all_data
 
 def export_to_csv(data, output_file="output.csv"):
